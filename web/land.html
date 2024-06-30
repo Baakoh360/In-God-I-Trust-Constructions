@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Services - IN GOD I TRUST CONSTRUCTIONS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        
+        .hero {
+            background-image: url('LL.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 70vh; /* Updated height to one-third of the viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 1em;
+            position: relative; /* Added position relative for absolute positioning */
+        }
+        .home-link {
+            position: absolute;
+            top: 10px; /* Adjust top position as needed */
+            left: 10px; /* Adjust left position as needed */
+            background-color: purple;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .home-link:hover {
+            background-color: #770384; /* Darker purple on hover */
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        main {
+            padding: 2em 1em;
+        }
+
+        .content-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9);
+            padding: 2em;
+            margin-bottom: 2em;
+        }
+
+        .content-container.with-image {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .content-container img {
+            width: 45%; /* Adjust the width to make the image larger */
+            max-width: 500px; /* Maximum width */
+            margin-left: 2em;
+            border-radius: 10px;
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        h2 {
+            color: #770384;
+            padding: 0.5em 0;
+        }
+
+        p {
+            padding: 0.5em 0;
+            margin: 0.5em 0;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0 0 2em 1em;
+            overflow: hidden;
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-bottom: 1em;
+        }
+
+        li a:hover {
+            transform: scale(1.1);
+            color: rgb(27, 138, 118);
+        }
+         
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: transform 1s, color 1s;
+        }
+        .content-images {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            flex-wrap: wrap;
+        }
+
+        .content-image {
+            width: 100%;
+            max-width: 400px; /* Increase max-width to make the images larger */
+            display: block;
+        }
+        .content-image:hover {
+            animation: shake 1s infinite;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(0px, 0px) rotate(0deg); }
+            10% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+            20% { transform: translate(1px, 1px) rotate(0.5deg); }
+            30% { transform: translate(-1px, 1px) rotate(-0.5deg); }
+            40% { transform: translate(1px, -1px) rotate(0.5deg); }
+            50% { transform: translate(0px, 0px) rotate(0deg); }
+            60% { transform: translate(1px, 1px) rotate(0.5deg); }
+            70% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+            80% { transform: translate(1px, -1px) rotate(0.5deg); }
+            90% { transform: translate(-1px, 1px) rotate(-0.5deg); }
+            100% { transform: translate(0px, 0px) rotate(0deg); }
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.5);
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+
+        p1 {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        /* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .content-container.with-image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-container img {
+        margin: 1em 0 0 0;
+    }
+
+    .content-images {
+        gap: 1em;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+        padding: 10px 12px;
+    }
+
+    .content-container {
+        padding: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+
+    .content-container img {
+        width: 100%;
+    }
+
+    .content-container {
+        padding: 1em;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <a href="index.html" class="home-link">Home</a>
+        <h1></h1>
+    </div>
+
+    <main>
+        <div class="content-container">
+            <section>
+                <h2>Registered Land and Survey Services</h2>
+                <p>At IN GOD I TRUST CONSTRUCTIONS, we understand the importance of registered land and accurate surveys in property ownership and development. Our services include:</p>
+                <ul>
+        </div>
+
+        <div class="content-container with-image">
+            <section>
+                <h2>Our Land Services Include:</h2>
+                <ul>
+                    <li><strong>Registered Land:</strong> Our team specializes in handling the registration process for land properties. Whether you're buying, selling, or transferring ownership, we ensure that all legal requirements are met efficiently. Our services are designed to be affordable, transparent, and tailored to your specific needs.</li>
+                    <li><strong>Survey Services:</strong> Accurate land measurement is crucial for property development and legal compliance. Our experienced surveyors utilize advanced equipment and techniques to provide precise land surveys. Whether it's boundary surveys, topographic surveys, or construction surveys, we deliver reliable results that meet industry standards.</li>
+                    <li><strong>Land Documentation:</strong> We assist in processing the necessary paperwork for land changes, including title deeds, land use certificates, and building permits. Our team handles the documentation process diligently, ensuring compliance with regulatory requirements and expediting the approval process.</li>
+                    <li><strong>Consultation and Guidance:</strong> Our experts offer consultation and guidance throughout the land registration and survey process. We provide valuable insights, answer queries, and offer recommendations to streamline your property-related endeavors.</li>
+                    <li><strong>Quality Assurance:</strong> We prioritize quality and accuracy in all our services. From land measurements to documentation, our commitment to excellence ensures that your property transactions proceed smoothly and with confidence.</li>
+                    <li><strong>Customer Support:</strong> Our dedicated customer support team is available to address your concerns, provide updates on your land registration and survey projects, and offer assistance whenever you need it.</li>
+               
+            </section>
+            
+            <img src="L1.jpg" alt="Electrical Work">
+        </div>
+
+        <div class="content-images">
+            <img src="L2.jpg" alt="Electrical" class="content-image">
+            <img src="L3.jpg" alt="Electrical" class="content-image">
+            <img src="L4.jpg" alt="Electrical" class="content-image">
+        </div>
+    
+    </main>
+
+    <footer>
+        <p1>&copy; 2024 IN GOD I TRUST CONSTRUCTIONS. All rights reserved.</p1>
+    </footer>
+</body>
+</html>

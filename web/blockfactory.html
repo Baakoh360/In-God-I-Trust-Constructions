@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Factory - IN GOD I TRUST CONSTRUCTIONS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background-color: #3e043e;
+            padding: 1em 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        
+        .hero {
+            background-image: url('F4.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 1em;
+            margin-top: 4em; /* Adjust for the height of the header */
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        main {
+            padding: 2em 1em;
+        }
+
+        .content-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9);
+            padding: 2em;
+            margin-bottom: 2em;
+        }
+
+        .content-container.with-image {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .content-container img {
+            width: 45%; /* Adjust the width to make the image larger */
+            max-width: 500px; /* Maximum width */
+            margin-left: 2em;
+            border-radius: 10px;
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        h2 {
+            color: #770384;
+            padding: 0.5em 0;
+        }
+
+        p {
+            padding: 0.5em 0;
+            margin: 0.5em 0;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0 0 2em 1em;
+            overflow: hidden;
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-bottom: 1em;
+        }
+
+        li a:hover {
+            transform: scale(1.1);
+            color: rgb(27, 138, 118);
+        }
+         
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: transform 1s, color 1s;
+        }
+
+        .content-images {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            flex-wrap: wrap;
+        }
+
+        .content-image {
+            width: 100%;
+            max-width: 400px; /* Increase max-width to make the images larger */
+            display: block;
+        }
+        .content-image:hover {
+            animation: shake 1s infinite;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(0px, 0px) rotate(0deg); }
+            10% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+            20% { transform: translate(1px, 1px) rotate(0.5deg); }
+            30% { transform: translate(-1px, 1px) rotate(-0.5deg); }
+            40% { transform: translate(1px, -1px) rotate(0.5deg); }
+            50% { transform: translate(0px, 0px) rotate(0deg); }
+            60% { transform: translate(1px, 1px) rotate(0.5deg); }
+            70% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+            80% { transform: translate(1px, -1px) rotate(0.5deg); }
+            90% { transform: translate(-1px, 1px) rotate(-0.5deg); }
+            100% { transform: translate(0px, 0px) rotate(0deg); }
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.5);
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+
+        p1 {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh; /* Adjust the height for smaller screens */
+                margin-top: 3em; /* Adjust for the height of the header */
+            }
+
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            .content-container.with-image {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content-container img {
+                width: 80%;
+                max-width: 300px; /* Adjust the max width for smaller screens */
+                margin-left: 0;
+                margin-top: 1em;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 0.5em 0;
+            }
+
+            nav ul li a {
+                font-size: 1em;
+            }
+
+            .content-images {
+                gap: 1em;
+            }
+
+            .content-image {
+                max-width: 100%; /* Ensure images are not too large for small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blockfactory.html">Block Factory</a></li>
+                <li><a href="electrical Store.html">Electrical Store</a></li>
+                <li><a href="Hardwarestore.html">Hardware Store</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1></h1>
+    </div>
+
+    <main>
+        <div class="content-container">
+            <section>
+                <h2>Welcome to IN GOD I TRUST CONSTRUCTIONS</h2>
+                <p>Welcome to our block factory, where innovation meets craftsmanship! <br>Elevate your construction projects with our premium-quality blocks, meticulously crafted to withstand the test of time.<br> From residential dreams to towering skyscrapers, our blocks lay the foundation for your vision.<br> Join the ranks of satisfied architects, builders, and engineers who trust our expertise.<br> Explore our diverse range of shapes, sizes, and colors, and let your creativity take flight. Transform your projects with the touch of excellence order from us today and build with confidence!</p>
+            </section>
+        </div>
+
+        <div class="content-container with-image">
+            <section>
+                <h2>Our Block Services Include:</h2>
+                <ul>
+                    <li><strong>Solid Concrete Blocks:</strong> Dense and robust blocks ideal for load-bearing walls, retaining walls, and foundations. They provide excellent strength and stability to a structure.
+                    </li>
+                    <li><strong>Hollow Concrete Blocks:</strong> Used for both load-bearing and non-load-bearing walls, these blocks are lighter and provide better insulation properties. They have hollow spaces within, reducing weight and offering better sound and temperature insulation.</li>
+                    <li><strong>Pavement Concrete Blocks (Pavers):</strong> Designed for creating durable and aesthetically pleasing outdoor surfaces such as driveways, walkways, patios, and other landscaping applications. They come in various shapes, sizes, and colors for design flexibility and interlocking designs for stability and ease of installation.</li>
+                </ul>
+            </section>
+            <img src="F2.webp" alt="Masonry Work">
+        </div>
+
+        <div class="content-images">
+            <img src="F1.jpg" alt="Flooring Work" class="content-image">
+            <img src="FF.jpg" alt="Flooring Work" class="content-image">
+        </div>
+    </main>
+
+    <footer>
+        <p1>© 2023 IN GOD I TRUST CONSTRUCTIONS. All rights reserved. | Privacy Policy | Terms of Service</p1>
+    </footer>
+</body>
+</html>

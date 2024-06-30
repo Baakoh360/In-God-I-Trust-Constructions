@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Home Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        .hero {
+            position: relative;
+            background-image: url('AA.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            height: calc(40vh); /* Cover full viewport minus 20px */
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(128, 0, 128, 0.5); /* Transparent purple overlay */
+            z-index: 1;
+        }
+
+        .hero h3 {
+            position: relative;
+            z-index: 2;
+            margin: 0 0 20px 0;
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            margin: 0 0 20px 0;
+        }
+
+        .property-listings {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -3cm; /* Move images up to cover part of the background */
+            padding: 30px 0;
+            margin-left: 3cm;
+            flex-wrap: wrap;
+        }
+
+        .property-container {
+            width: 30%;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .property-container a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .property-container img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .square {
+            width: 70%;
+            padding-bottom: 70%; /* Maintain square aspect ratio */
+            position: relative;
+        }
+
+        .square img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 95%;
+            object-fit: cover; /* Ensure image covers the square without stretching */
+            z-index: 1;
+            transition: transform 0.3s ease; /* Smooth transition for hovering */
+        }
+
+        .property-container:hover img {
+            transform: scale(1.1); /* Scale up the image on hover */
+        }
+
+        @keyframes hoverEffect {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .property-container:hover img {
+            animation: hoverEffect 2s ease infinite; /* Apply the animation on hover */
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.5);
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+
+        p1 {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 80%;
+            }
+
+            .property-listings {
+                margin-left: 0;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .property-container {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .square {
+                width: 100%;
+                padding-bottom: 100%; /* Maintain square aspect ratio */
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>IN GOD I TRUST CONSTRUCTIONS</h1>
+            <h3>Innovative Solutions.... Rooted in Trust.</h3>
+        </div>
+    </section>
+    <section class="property-listings">
+        <div class="property-container">
+            <a href="construction.html">
+                <div class="square">
+                    <img src="A1.avif" alt="Construction">
+                </div>
+                <h3>Sustainable Construction</h3>
+            </a>
+        </div>
+        <div class="property-container">
+            <a href="store.html">
+                <div class="square">
+                    <img src="A2.jpg" alt="Store">
+                </div>
+                <h3>Construction Store</h3>
+            </a>
+        </div>
+        <div class="property-container">
+            <a href="land.html">
+                <div class="square">
+                    <img src="A3.jpg" alt="Land">
+                </div>
+                <h3>Registered Lands</h3>
+            </a>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p1>&copy; 2024 IN GOD I TRUST CONSTRUCTIONS. All rights reserved.</p1>
+        </div>
+    </footer>
+</body>
+</html>
